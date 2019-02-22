@@ -1,0 +1,196 @@
+
+settings.json
+{
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "vetur.validation.template": false,
+    "editor.fontSize": 23,
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "git.enableSmartCommit": true,
+    "window.zoomLevel": 1,
+    "editor.minimap.enabled": false,
+    "workbench.activityBar.visible": true,
+    "editor.lineNumbers": "off",
+    "prettier.singleQuote": true,
+    "prettier.semi": false,
+    "prettier.printWidth": 150,
+    "prettier.cssEnable": [
+      ""
+    ],
+    "liveServer.settings.donotShowInfoMsg": true // 禁止prettier格式化css，因为prettier不加空行
+  }
+  
+keybindings.json
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "key": "alt+s",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "-editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+  }
+
+]
+
+code snippets:
+css.json
+{
+  "1": {
+		"prefix": "dg",
+		"body": [
+			"display: grid;",
+			"$1"
+		],
+		"description": "display: grid;"
+  }
+}
+
+
+javascript.json
+{
+	"1": {
+		"prefix": "did",
+		"body": [
+			"document.getElementById('$1')"
+		],
+		"description": "document.getElementById('$1')"
+	},
+	"2": {
+		"prefix": "fn",
+		"body": [
+			"($1) {",
+			"  $2",
+			"}"
+		],
+		"description": "($1) {$2}"
+	},
+	"3": {
+		"prefix": "efn",
+		"body": [
+			"function ($1) {",
+			"  $2",
+			"}"
+		],
+		"description": "function ($1) {$2}"
+	},
+	"4": {
+		"prefix": "loog",
+		"body": [
+			"console.log($1)"
+		],
+		"description": "my console.log()"
+	},
+	"5": {
+		"prefix": "gethttp",
+		"body": [
+			"this.\\$http",
+      "  .get('', {",
+      "    params: {",
+      "      $1",
+      "    }",
+      "  })",
+      "  .then(res => {",
+      "    $2",
+      "  })",
+      "  .catch(error => {});"
+		],
+		"description": "$http.get()"
+	},
+	"6": {
+		"prefix": "end",
+		"body": [
+			" // end of $1"
+		],
+		"description": "// end of $1"
+	},
+	"7": {
+		"prefix": "afn",
+		"body": [
+      "($1) => {",
+      "  $2",
+      "}",
+		],
+		"description": "箭头函数"
+	},
+	"8": {
+		"prefix": "afn",
+		"body": [
+      "($1) => { $2 }"
+		],
+		"description": "极简箭头函数"
+	},
+	"9": {
+		"prefix": "dqs",
+		"body": [
+      "document.querySelector('$1')"
+		],
+		"description": "document.querySelector('$1')"
+	},
+}
+
+scss.json
+{
+ "3": {
+		"prefix": "fcc",
+		"body": [
+			"display: flex;",
+      "justify-content: center;",
+      "align-items: center;",
+      "$1"
+		],
+		"description": "flex center center"
+  },
+  "4": {
+		"prefix": "abd",
+		"body": [
+      "border: 1px solid #000;",
+      "* {",
+      "  border: 1px solid #000;",
+      "}",
+      "$1"
+		],
+		"description": "all with border"
+  },
+}
+
+vue-html.json
+{
+	"1": {
+		"prefix": "mm",
+		"body": [
+			"<!-- $1 -->"
+		],
+		"description": "<!-- $1 -->"
+	},
+	"2": {
+		"prefix": "end",
+		"body": [
+			" <!-- end of $1 -->"
+		],
+		"description": "<!-- end of $1 -->"
+  },
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
